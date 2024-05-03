@@ -1,0 +1,35 @@
+/* * {
+  color: red;
+} */
+
+/* #title {
+  color: green;
+}
+.sub-title {
+  color: red;
+}
+h3 {
+  color: blueviolet;
+} */
+
+/* .content .title {
+  color: red;
+}
+.box .title {
+  color: green;
+} */
+
+/* .box > .title {
+  color: green;
+}
+
+.menu > li > a {
+  color: red;
+} */
+
+/*
+tenthe.tenclass#tenid
+*/
+div#text.content {
+  color: red;
+}

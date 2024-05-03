@@ -1,0 +1,41 @@
+/*
+selector:not(selector2) --> Loại trừ
+*/
+/* ul li:not(.active, .light) {
+  color: red;
+} 
+first-child --> Chọn thành phần con đầu tiên
+last-child --> Chọn thành phần con cuối cùng
+first-of-type --> Chọn thành phần cùng kiểu đầu tiên
+last-of-type --> Chọn thành phần cùng kiểu cuối cùng
+*/
+/* 
+ul li:first-child {
+  color: red;
+}
+ul li:last-child {
+  color: green;
+} */
+/* ul li:first-of-type {
+  color: red;
+}
+ul li:last-of-type {
+  color: green;
+} */
+
+/* ul li:nth-of-type(5) {
+  color: red;
+} */
+
+.checkbox input:checked ~ span {
+  color: red;
+}
+.checkbox input:disabled ~ span {
+  color: gray;
+}
+.checkbox input:checked:disabled ~ span {
+  color: green;
+}
+.name:valid {
+  background: yellow;
+}

@@ -1,0 +1,88 @@
+/*
+Thuộc tính font-family: Thay đổi font chữ cho văn bản
+Cú pháp: font-family: tenfont1, tenfont2,...
+
+Lưu ý: 
+- Nếu tên font có khoảng trắng --> Thêm vào cặp "
+- Trong thuộc tính font-family sẽ có các giá trị đại diện cho họ font
++ serif: Họ có chân
++ sans-serif: Họ không chân
+
+Thuộc tính text-decoration: Thay đổi gạch ngang ở văn bản
+- none --> Không có gạch ngang
+- underline --> Gạch dưới
+- overline --> Gạch trên
+- line-through --> Gạch giữa
+
+Thuộc tính text-transform: Biến đổi kiểu chữ (Chữa hoa, chữ thường)
+- none --> Giữ nguyên bản gốc
+- uppercase --> Chữ hoa
+- lowercase --> Chữ thường
+- capitalize --> Ký tự đầu của mỗi từ viết hoa
+
+Thuộc tính letter-spacing: Khoảng cách mỗi ký tự
+
+Thuộc tính word-spacing: Khoảng cách giữa mỗi từ
+
+Thuộc tính text-align: Căn chỉnh văn bản theo chiều ngang
+- left: Trái
+- center: Giữa
+- right: Phải
+- justify: Căn đều 2 bên
+*/
+@font-face {
+  font-family: "SVN Fontbox";
+  src: url("../fonts/SVN-Fontbox-Boathouse-Filled.otf");
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato;
+  src: url("../fonts/Lato-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: underline green;
+  text-transform: none;
+  /* letter-spacing: 3px; */
+  /* word-spacing: 0px; */
+}
+
+.box {
+  border: 1px solid red;
+  /* word-wrap: break-word; */
+  /* word-break: break-all; */
+  text-align: right;
+  text-align-last: left;
+}

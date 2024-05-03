@@ -1,0 +1,45 @@
+/*
+1. tenthe[tenthuoctinh] --> Chọn thẻ html có thuộc tính
+2. tenthe[tenthuoctinh="giatri"] --> Chọn thẻ html thuộc tính và giá trị
+3. tenthe[tenthuoctinh^="giatri"] --> Chọn thẻ html có thuộc tính bắt đầu bằng giá trị
+4. tenthe[tenthuoctinh$="giatri"] --> Chọn thẻ html có thuộc tính kết thúc bằng giá trị
+5. tenthe[tenthuoctinh*="giatri"] --> Chọn thẻ có giá trị nằm trong thuộc tính
+6. tenthe[tenthuoctinh~="giatri"] --> Chọn thẻ có giá trị là 1 từ
+*/
+/* ul li a[target] {
+  color: red;
+} */
+/* ul li a[href="https://fullstack.edu.vn"]
+{
+  color: red;
+} */
+/* ul li a[href^="https://fullstack.edu.vn"]
+{
+  color: red;
+} */
+
+/* ul li a[href$=".vn"] {
+  color: red;
+} */
+
+/* ul li a[href*="fullstack.edu.vn"] {
+  color: red;
+} */
+/* ul li a[title~="hello"] {
+  color: red;
+} */
+
+#red:checked ~ label[for="red"],
+#red:checked ~ p {
+  color: red;
+}
+
+#green:checked ~ label[for="green"],
+#green:checked ~ p {
+  color: green;
+}
+
+#blue:checked ~ label[for="blue"],
+#blue:checked ~ p {
+  color: blue;
+}

@@ -1,0 +1,41 @@
+/*
+Selector: ~
+- Chọn thẻ html ngang hàng và đứng sau
+- Điều kiện: Ngang hàng và thuộc 1 cha
+
+Selector: + 
+- Chọn thẻ html ngang hàng và đứng liền sau
+- Điều kiện: Ngang hàng và thuộc 1 cha
+
+Selector: ,
+- Chọn các selector có cùng nội dung
+- Cú pháp: selector1, selector2, selector3,...
+*/
+/* p + h2 + h2 {
+  color: red;
+}
+
+p ~ div h2 {
+  color: green;
+} */
+
+/* h2 + h2 {
+  color: red;
+} */
+
+.lists input:checked ~ span {
+  color: red;
+}
+
+.box,
+.content {
+  background: gainsboro;
+}
+
+.box {
+  color: red;
+}
+
+.content {
+  color: green;
+}
