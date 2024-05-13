@@ -1,0 +1,45 @@
+/**
+width: Thiết lập chiều rộng
+height: Thiết lập chiều cao
+==> Chỉ áp dụng với thẻ block, nếu muốn thẻ inline thiết lập được width, height --> Chuyển thành block hoặc inline-block (Dùng thuộc tính display)
+
+Đơn vị: 
+px, em, rem
+% --> Tỷ lệ với kích thước của thẻ cha
+vw (viewport width)
+vh (viewport height)
+ */
+body {
+  height: 2000px;
+}
+/* .box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+} */
+.link {
+  width: 200px;
+  height: 50px;
+  border: 1px solid red;
+  /* display: inline-block; */
+}
+.text {
+  width: 200px;
+  height: 50px;
+  border: 1px solid red;
+  /* display: inline-block; */
+}
+/* img {
+  width: 200px;
+} */
+
+/*
+Trong thẻ inline có 2 loại: 
+- non-replace: Chiều rộng phụ thuộc vào nội dung của thẻ --> width, height không thiết lập được
+- replace: Nội dung phụ thuộc vào người dùng hoặc phụ thuộc vào yếu tố ở bên ngoài
++ img: Phụ thuộc link ảnh
++ video: Phụ thuộc link video
++ iframe: Phụ thuộc vào link trang web khác
++ input: Phụ thuộc vào dữ liệu người dùng nhập
+==> Bị thay thế, trình duyệt sẽ tự động chuyển thành inline-block
+*/

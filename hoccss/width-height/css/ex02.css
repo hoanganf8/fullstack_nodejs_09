@@ -1,0 +1,24 @@
+/*
+max-width: Chiều rộng tối đa
+min-width: Chiều rộng tối thiểu
+min-height: Chiều cao tối thiểu
+max-height: Chiều cao tối đa
+
+min-width <===== width =====> max-width
+min-height <===== height =====> max-height
+*/
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+}
+.content {
+  background: yellowgreen;
+  border: 1px solid green;
+  width: 0px;
+  min-width: 100px;
+  max-width: 100%;
+}
+img {
+  max-width: 100%;
+}

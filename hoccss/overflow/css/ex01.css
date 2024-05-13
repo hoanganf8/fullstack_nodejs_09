@@ -1,0 +1,23 @@
+/*
+Thuộc tính overflow: Xử lý nội dung bị tràn
+- visible
+- hidden
+- scroll
+- auto
+
+overflow-x
+overflow-y
+padding
+margin
+box model
+*/
+.box {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.box ul {
+  width: 400px;
+}

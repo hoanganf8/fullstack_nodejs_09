@@ -1,0 +1,50 @@
+/*
+Thuộc tính float: Trôi các thẻ html về phía trái hoặc phải của thẻ cha
+- none
+- left
+- right
+
+Thuộc tính clear: Ngăn không cho các thẻ html bị trôi bởi float
+- left
+- right
+- both
+Điều kiện: Chỉ hoạt động với block
+*/
+.box {
+  border: 1px solid red;
+  width: 400px;
+  margin: 30px auto;
+  overflow: auto;
+}
+.box .item-1 {
+  width: 20%;
+  height: 100px;
+  background: green;
+  float: right;
+}
+.box .item-2 {
+  width: 20%;
+  height: 100px;
+  background: red;
+  float: right;
+}
+.box .item-3 {
+  width: 20%;
+  height: 50px;
+  background: blueviolet;
+  float: right;
+}
+.clear {
+  display: block;
+  clear: both;
+}
+.text {
+  clear: both;
+}
+a {
+  background: green;
+  color: #fff;
+}
+.link {
+  clear: both;
+}

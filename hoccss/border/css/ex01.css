@@ -1,0 +1,43 @@
+/*
+Border CSS: Thêm viền ở thẻ html
+- border-width: Độ dày
+- border-style: Kiểu viền
++ none
++ solid
++ dotted
++ dashed
++ double
+- border-color: Màu viền
+- border-top-width
+- border-left-width
+- border-right-width
+- border-bottom-width
+- border-top-style
+- border-left-style
+- border-right-style
+- border-bottom-style
+- border-top-color
+- border-left-color
+- border-right-color
+- border-bottom-color
+- border: width style color
+- border-top: width style color
+- border-left: width style color
+- border-right: width style color
+- border-bottom: width style color
+*/
+.box {
+  /* border-width: 5px;
+  border-style: solid; */
+  /* border-color: green red blueviolet blue; */
+  /* border-top-color: green;
+  border-left-color: red;
+  border-right-color: blueviolet;
+  border-bottom-color: blue; */
+  /* border-top: 5px solid red;
+  border-left: 5px solid red;
+  border-right: 5px solid red;
+  border-bottom: 5px solid red; */
+  color: rgb(209, 61, 16);
+  border: 5px solid currentColor;
+}

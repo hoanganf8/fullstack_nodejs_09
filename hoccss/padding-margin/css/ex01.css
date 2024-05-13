@@ -1,0 +1,42 @@
+/*
+Thuộc tính padding: Đệm khoảng cách giữa border và nội dung
+- padding: value
+- padding: value1 value2
+- padding: value1 value2 value3
+- padding: value1 value2 value3 value4
+
+Thuộc tính mở rộng: 
+- padding-top
+- padding-left
+- padding-right
+- padding-bottom
+
+Note: Khi dùng đơn vị %, padding theo width của thẻ cha
+
+Lý do: Tạo ra các box theo tỷ lệ
+
+padding không có giá trị âm
+padding không có giá trị auto
+padding-top và padding-bottom không hoạt động với thẻ inline
+*/
+/* .content {
+  width: 400px;
+  border: 1px solid green;
+} */
+.box {
+  border: 1px solid red;
+  /* width: 400px;
+  height: 300px; */
+}
+.btn-wrap {
+  text-align: center;
+  padding: 10px;
+}
+.link {
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #fff;
+  background: green;
+  border-radius: 99px;
+  display: inline-block;
+}

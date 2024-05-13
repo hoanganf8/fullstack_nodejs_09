@@ -1,0 +1,10 @@
+.box {
+  width: 0;
+  height: 0;
+  border: 50px solid;
+  border-color: transparent transparent blue transparent;
+  border-top-width: 0;
+}
+/* 
+Shape css
+*/

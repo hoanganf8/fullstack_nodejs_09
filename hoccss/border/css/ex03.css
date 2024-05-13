@@ -1,0 +1,37 @@
+/*
+Thuộc tính border-radius: Bo góc
+
+Nếu là hình vuông, border-radius từ 50% trở lên tạo thành hình tròn
+
+Thuộc tính mở rộng
+- border-top-lefr-radius
+- border-top-right-radius
+- border-bottom-left-radius
+- border-bottom-right-radius
+*/
+.box {
+  /* width: 400px;
+  height: 400px; */
+  border: 5px solid red;
+  border-radius: 10px 20px 30px 40px;
+}
+.btn {
+  background: green;
+  color: #fff;
+  border: none;
+  width: 100px;
+  height: 35px;
+  border-radius: 9999px;
+}
+.btn-outline {
+  color: green;
+  background: transparent;
+  border-radius: 9999px;
+  width: 100px;
+  height: 35px;
+  border: 2px solid currentColor;
+}
+.btn-outline:hover {
+  background: green;
+  color: #fff;
+}

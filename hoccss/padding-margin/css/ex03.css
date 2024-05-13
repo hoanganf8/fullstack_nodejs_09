@@ -1,0 +1,41 @@
+/*
+box-sizing: Chọn kích thước theo thành phần nào
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+/* .box {
+  width: 300px;
+  border: 5px solid red;
+  padding: 50px;
+} */
+
+.box {
+  width: 400px;
+  margin: 30px auto;
+  border: 1px solid red;
+  padding: 30px;
+  font-size: 0;
+}
+.box .item {
+  display: inline-block;
+  border: 1px solid green;
+  font-size: 2rem;
+}
+ul {
+  width: 400px;
+  margin: 30px auto;
+  border: 1px solid red;
+  list-style: none;
+  font-size: 0;
+}
+ul li {
+  display: inline-block;
+  background: green;
+  color: #fff;
+  font-size: initial;
+  padding: 5px 15px;
+}

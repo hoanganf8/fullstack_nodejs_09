@@ -1,0 +1,39 @@
+/*
+Background CSS
+- background-color
+- background-image
+- background-repeat
++ repeat --> Mặc định
++ repeat-x --> Lặp theo trục X
++ repeat-y --> Lặp theo trục Y
++ no-repeat --> Không lặp
+- background-position: Thay đổi vị trí của ảnh nền
++ Trục X: left, center, right, đơn vị tuyệt đối, tương đối (%)
++ Trục Y: top, center, bottom, đơn vị tuyệt đối, tương đối (%)
+- background-size: Thay đổi kích thước của ảnh nền
++ cover --> Phủ kín khung hiển thị
++ contain
+- background-attachment --> Cố định hay không background kéo thanh cuộn trình duyệt
++ scroll
++ fixed
+- background --> Thuộc tính gộp các thuộc tính trên
+Cú pháp
+background: color image repeat position / size attachment
+*/
+body {
+  /* height: 400px; */
+  /* border: 1px solid red; */
+  /* background-color: aqua; */
+}
+.box {
+  height: 800px;
+  /* background-color: aqua;
+  background-image: url("https://fastly.picsum.photos/id/87/536/354.jpg?hmac=vbC5y7DIze_jCRPV3AzYdCC5F_f2YAQ-nqBuii7ZSZY");
+  background-repeat: no-repeat;
+  background-position: 0 0; */
+  /* background-size: contain; */
+  /* background-attachment: fixed; */
+  background: aqua
+    url("https://fastly.picsum.photos/id/87/536/354.jpg?hmac=vbC5y7DIze_jCRPV3AzYdCC5F_f2YAQ-nqBuii7ZSZY")
+    no-repeat fixed 0 0 / 600px;
+}
