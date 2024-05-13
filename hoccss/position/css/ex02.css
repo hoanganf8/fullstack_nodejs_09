@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 2000px;
+}
+.modal-box {
+  display: none;
+}
+input:checked + .modal-box {
+  display: block;
+}
+.modal-box .modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 5%;
+  max-width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  z-index: 9999;
+  padding: 15px;
+}
+.modal-box .modal .modal-header {
+  overflow: auto;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.modal-box .modal .modal-header h2 {
+  float: left;
+}
+.modal-box .modal .modal-header .close-btn {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-box .modal .modal-header .close-btn:hover {
+  color: red;
+}
+.modal-box .overlay {
+  position: fixed;
+  inset: 0;
+  background: #0000007b;
+  z-index: 9998;
+}

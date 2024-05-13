@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 2000px;
+}
+.box {
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  border: 1px solid red;
+  position: relative;
+}
+
+.item {
+  background-color: green;
+  color: #fff;
+  width: 100px;
+  height: 50px;
+  border: 1px solid #fff;
+}
+.item:nth-child(1) {
+  position: relative;
+}
+.item:nth-child(2) {
+  /* position: relative;
+  left: calc(100% - 100px);
+  top: calc(0px - 50px); */
+  /* height: auto;
+  width: auto; */
+  position: absolute;
+  inset: 20px 50px 100px 200px;
+  z-index: 1;
+}
+.item:nth-child(3) {
+  position: relative;
+  z-index: 1;
+}
+/*
+Thuộc tính position: Thay đổi vị trí các thẻ htmll
+- static: Mặc định, không có position
+- relative: Tương đối với vị trí ban đầu
+- absolute: Tuyệt đối
+- fixed: Cố định khi kéo thanh cuộn
+
+Các thuộc tính khi kích hoạt position (Trừ static)
+- top
+- left
+- right
+- bottom
+- z-index
+- inset
+*/

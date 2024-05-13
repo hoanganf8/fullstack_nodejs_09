@@ -28,7 +28,23 @@ body {
   padding: 7px 15px;
   font-size: initial;
 }
-.menu li a:hover {
+.menu li:hover a {
   background: green;
   border-radius: 5px;
+}
+.menu ul {
+  position: absolute;
+  background: green;
+  min-width: 150px;
+  display: none;
+}
+
+.menu ul li {
+  display: block;
+}
+.menu li:hover ul {
+  display: block;
+}
+.menu ul li a:hover {
+  background: red;
 }
