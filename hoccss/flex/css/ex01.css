@@ -1,0 +1,103 @@
+/*
+Flex = Flexible Box Module
+- Kỹ thuật xây dựng các layout (bố cục) 1 cách linh hoạt
+- Flex có 2 thành phần
++ Flex Container (Thẻ bọc)
++ Flex Item (Thẻ con)
+- Trục trong Flex
++ Main: Trục chính (Mặc định nằm ngang)
++ Cross: Vuông góc với trục chính
+==> Có thể thay đổi hướng của trục main
+
+1. Nhóm thuộc tính flex container
+- display: flex --> Kích hoạt flexbox
+- flex-direction: Chọn hướng cho trục chính
++ row
++ row-reverse
++ column
++ column-reverse
+- justify-content: Căn chỉnh các item theo hướng song song với trục chính
++ flex-start
++ center
++ flex-end
++ space-between
++ space-around
++ space-evenly
++ start
++ end
+- align-items: Căn chỉnh các item theo hướng song song với trục cross
++ stretch
++ flex-start
++ center
++ flex-end
++ baseline
+- flex-wrap: wrap các item khi kích thước > container
++ nowrap
++ wrap
++ wrap-reverse
+- align-content: Căn chỉnh các hàng hoặc cột (Chỉ áp dụng khi có nhiều hàng hoặc nhiều cột)
++ stretch
++ flex-start
++ center
++ flex-end
++ space-around
++ space-between
++ space-evenly
+- gap: Thay đổi khoảng các GIỮA các item
+- row-gap
+- column-gap
+
+2. Nhóm thuộc tính flex item
+- flex-grow: number --> Lấp đầy các item để bù vào vị trí còn trống của container theo tỷ lệ nhất định
+- flex-shrink: number --> Thiết lập tỷ lệ tự động co lại của flex item khi tổng kích thước > container
+- flex-basis: value + unit --> Thiết lập kích thước ban đầu cho flex item
+- flex: grow shrink basis
+- align-self: Căn chỉnh 1 item theo hướng song song với trục cross
++ stretch
++ flex-start
++ center
++ flex-end
++ baseline
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid red;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  /* flex-wrap: wrap; */
+  align-content: stretch;
+  /* gap: 10px 20px; */
+  /* row-gap: 10px;
+  column-gap: 20px; */
+}
+.item {
+  /* margin: 15px; */
+  background: green;
+  color: #fff;
+  padding: 15px;
+  border: 1px solid #fff;
+  /* flex-grow: 100; */
+  /* flex-shrink: 0; */
+  /* min-width: 100px; */
+  /* flex-basis: 115px; */
+  /* max-width: 110px; */
+  flex: 0 1 100px;
+}
+/* .item:nth-child(2) {
+  flex-grow: 200;
+} */
+
+.item:nth-child(3) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
