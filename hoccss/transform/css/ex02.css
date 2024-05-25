@@ -1,0 +1,33 @@
+label {
+  display: block;
+  line-height: 1.5;
+  padding: 5px 0;
+}
+label span {
+  position: relative;
+  display: flex;
+  user-select: none;
+}
+label span::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid green;
+  margin-right: 5px;
+}
+label span::after {
+  content: "";
+  display: none;
+  width: 12px;
+  height: 4px;
+  border: green solid;
+  border-width: 0 0 2px 2px;
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  rotate: -45deg;
+}
+label input[type="checkbox"]:checked + span::after {
+  display: block;
+}

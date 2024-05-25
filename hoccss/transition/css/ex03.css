@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.switch-toggle {
+    display: block;
+    width: 80px;
+    height: 40px;
+    background: gray;
+    margin: 30px auto;
+    border-radius: 99px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.switch-toggle .btn {
+    display: block;
+    width: 38px;
+    height: 38px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 1;
+    transition: left 0.3s ease;
+}
+.switch-toggle .bg {
+    position: absolute;
+    inset: 0;
+    transition: background 0.3s ease;
+}
+.switch-toggle input:checked + .btn {
+    left: calc(100% - 39px);
+}
+.switch-toggle input:checked ~ .bg {
+    background: green;
+}
