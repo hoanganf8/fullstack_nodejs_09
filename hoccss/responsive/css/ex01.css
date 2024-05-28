@@ -2,6 +2,10 @@ body {
   background: green;
   color: #fff;
 }
+.icon {
+  font-size: 3rem;
+  color: yellow;
+}
 @media screen and (max-width: 1199px) {
   body {
     background: red;

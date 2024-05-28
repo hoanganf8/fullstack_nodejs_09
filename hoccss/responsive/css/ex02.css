@@ -1,0 +1,6 @@
+.products {
+  padding: 30px 0;
+}
+.products .product-item {
+  background: yellow;
+}
