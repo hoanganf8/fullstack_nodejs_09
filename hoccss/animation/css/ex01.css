@@ -1,0 +1,69 @@
+/*
+Thuộc tính animation
+- Tạo hiệu ứng phức tạp
+- Viết kịch bản cho hiệu ứng
+- Sử dụng @keyframes
+
+Cú pháp @keyframes
+@keyframes tenkeyframe {
+    0% {
+        
+    }
+    value1% {
+
+    }
+    value2% {
+
+    }
+    valuen% {
+
+    }
+    100% {
+    }
+}
+
+Cú pháp animation
+- animation-name: tenkeyframe
+- animation-duration: thời gian hoàn thành hiệu ứng
+- animation-timing-function: giống transition
+- animation-delay: thời gian trước khi hiệu ứng chạy
+- animation-iteration-count: Số lần chạy hiệu ứng (infinite: Chạy vô hạn)
+- animation: Gộp tất cả các thuộc tính trên
+*/
+.box {
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+  margin: 30px auto;
+  position: relative;
+}
+.box span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: green;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation-name: move;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes move {
+  25% {
+    top: 0;
+    left: 100%;
+    translate: -100%;
+  }
+  50% {
+    top: 100%;
+    left: 100%;
+    translate: -100% -100%;
+  }
+  75% {
+    top: 100%;
+    left: 0;
+    translate: 0 -100%;
+  }
+}

@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 30px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: gray;
+  background-image: conic-gradient(
+    var(--color) calc(var(--rate) * 1%),
+    transparent 0
+  );
+}
+.number {
+  background: #fff;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color);
+}
+.number::after {
+  content: attr(data-value); /* Đọc giá trị thuộc tính html */
+}
+
+/*
+- box-shadow
+- text-shadow
+- background gradient
+- variable
+- Thứ tự ưu tiên, kế thừa
+- Thư viện: animate.style, fontawesome
+*/
