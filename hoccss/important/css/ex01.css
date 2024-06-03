@@ -1,0 +1,48 @@
+/*
+Thứ tự độ ưu tiên
+0. !important
+1. inline
+2. id
+3. class
+4. tag
+
+Phạm vi tác động càng nhỏ ==> Độ ưu tiên càng cao
+
+Một số cách để tăng độ ưu tiên
+
+- Thứ tự: Sau ưu tiên cao hơn trước
+- Selector chi tiết: Độ ưu tiên cao hơn
+*/
+/* #content {
+  color: blueviolet;
+  background: gray;
+}
+
+.box {
+  color: green;
+}
+
+div {
+  color: red !important;
+  background: yellow;
+} */
+/* div.box {
+  color: green;
+}
+.box {
+  color: red;
+} */
+
+.box {
+  color: red;
+}
+.box {
+  color: green;
+}
+
+/*
+select1 select2 select3 select4
+
+Mobile: 
+select1 select4
+*/

@@ -1,0 +1,23 @@
+/*
+Biến: Lưu trữ dữ liệu tạm thời trong nộ nhớ RAM
+1. Biến toàn cục (Global Variable)
+- Khai báo trong :root
+- Sử dụng ở khắc mọi nơi kể từ sau vị trí khai báo
+2.Biến cục bộ (Local Variable)
+- Khai báo trong selector cụ thể
+- Chỉ được sử dụng trong selector và các selector con của nó
+
+Lưu ý: Biến trong css chỉ lưu trữ các giá trị của các thuộc tính css
+*/
+@import url("./variable.css");
+.box {
+  --font-size: 2rem;
+  --border-color: red;
+  /* background: var(--primary-color); */
+  /* color: var(--secondary-color); */
+  font-size: var(--font-size);
+  border: 2px solid var(--border-color);
+}
+.box:hover {
+  --border-color: green;
+}
