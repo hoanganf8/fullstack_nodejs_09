@@ -1,0 +1,86 @@
+//Nested Selector
+//Nested Property: Không nên dùng
+// .box {
+//   padding: 30px 0;
+//   .logo {
+//     img {
+//       max-width: 200px;
+//       height: auto;
+//     }
+//   }
+//   .content {
+//     background: gray;
+//     .text {
+//       color: red;
+//       a {
+//         text: {
+//           decoration: none;
+//           align: center;
+//           transform: uppercase;
+//         }
+//         &:hover {
+//           color: yellow;
+//         }
+//         &::before {
+//           content: "a";
+//         }
+//       }
+//       + .image {
+//         display: block;
+//       }
+//     }
+//   }
+// }
+
+//Kế thừa:
+//1. @extend:
+//1.1. @extend selector
+//1.2. @extend placeholder
+//2. @mixin và @include
+//3. @function: Thường dùng có sẵn của SCSS
+// %base {
+//   padding: 30px 0;
+//   width: 1200px;
+//   margin: 0 auto;
+// }
+@mixin section-base {
+  padding: 30px 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+@mixin container($width: 1200px, $spacer: 0) {
+  .container {
+    max-width: $width;
+    margin: $spacer auto;
+  }
+}
+@include container();
+.box {
+  //   @extend %base;
+  @include section-base;
+  @include container(1400px);
+  border: 1px solid red;
+}
+.products {
+  //   @extend %base;
+  background: red;
+  @include container(1200px, 30px);
+}
+.posts {
+  //   @extend %base;
+  box-shadow: 5px 5px 5px #ccc;
+}
+
+// .menu {
+//   li {
+//     a {
+//       color: red;
+//       &.active {
+//         color: green;
+//       }
+//       &:hover {
+//         @extend .active;
+//       }
+//     }
+//   }
+// }

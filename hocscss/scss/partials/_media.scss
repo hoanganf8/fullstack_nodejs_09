@@ -1,0 +1,12 @@
+//Định nghĩa các mixin tương ứng với các breakpoint
+@mixin screenMobile {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin screenTablet {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}

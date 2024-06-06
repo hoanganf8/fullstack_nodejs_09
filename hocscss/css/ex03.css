@@ -1,0 +1,22 @@
+@media screen and (min-width: 576px) {
+  .col-sm {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .col-md {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .col-lg {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .col-xl {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=ex03.css.map */

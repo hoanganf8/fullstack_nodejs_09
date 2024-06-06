@@ -1,0 +1,142 @@
+//Responsive
+@import "partials/media";
+
+// @include screenTablet {
+//   .header {
+//     padding: 50px 0;
+//     background: gray;
+//   }
+// }
+
+// @include screenMobile {
+//   .header {
+//     padding: 30px 0;
+//     img {
+//       display: block;
+//     }
+//   }
+// }
+
+//Toán tử trong SCSS
+//1. Số học: +, -, *, /, % (Chia lấy dư)
+//2. Toán tử so sánh: ==, >, <, >=, <=, !=
+//3. Toán tử kết hợp: and, or, not
+//Ví dụ: a >= 5 and a <= 10
+
+//Kiểu dữ liệu
+//1. Chuỗi: Đặt trong cặp dấu nháy
+//2. Số
+//3. Các thuộc tính và giá trị của CSS
+//4. Boolean: true và false
+//5. Lists
+//6. Map
+$a: "f8"; //String
+$b: 10; //Number
+$c: true; //Boolean
+$sizes: 10px, 20px, 30px; //Lists
+$breakpoint: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+); //Map
+// .box {
+//   font-family: $a;
+//   font-size: $b + 10px;
+// }
+
+//Câu lệnh rẽ nhánh: @if @else
+// Cú pháp 1: @if dieukien { Code }
+// Cú pháp 2: @if dieukien { Code } @else { Code }
+// $a: 9;
+// @if $a >= 10 {
+//   .box {
+//     color: red;
+//   }
+// } @else {
+//   .item {
+//     color: green;
+//   }
+// }
+
+// $size: 5;
+// @if ($size < 10) {
+//   .item-small {
+//     font-size: 10px;
+//   }
+// } @else if ($size < 30) {
+//   .item-medium {
+//     font-size: 30px;
+//   }
+// } @else if ($size < 50) {
+//   .item-large {
+//     font-size: 50px;
+//   }
+// } @else {
+//   .item-xlarge {
+//     font-size: 100px;
+//   }
+// }
+
+//Vòng lặp
+//1. @for
+//2. @each
+
+// $number: 12;
+// @for $i from 1 through $number {
+//   .column-#{$i} {
+//     $width: 30 * $i;
+//     //if else
+//     @if ($i % 2 == 0) {
+//       //Số chẵn
+//       $width: $width + 0%;
+//     } @else {
+//       $width: $width + px;
+//     }
+//     width: $width;
+//   }
+// }
+
+// $sizes: 20px, 40px, 60px, 80px; //Lists
+// $length: length($sizes); //Trả về số lượng phần tử của lists
+// $count: 0;
+// @each $size in $sizes {
+//   $count: $count + 1;
+//   .item-#{$size} {
+//     @if ($count == $length) {
+//       width: 0;
+//     } @else {
+//       width: $size * 2;
+//     }
+//   }
+// }
+
+// $sizes: (small, 20px, normal), (medium, 40px, 600), (large, 80px, 800);
+
+// @each $name, $size, $weight in $sizes {
+//   .item-#{$name} {
+//     font-size: $size;
+//     font-weight: $weight;
+//   }
+// }
+
+$breakpoint: (
+  sm: 576px,
+  //key: value
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+@each $name, $size in $breakpoint {
+  @media screen and (min-width: #{$size}) {
+    .col-#{$name} {
+      width: 100%;
+    }
+  }
+}
+
+//@use
+//@forward
+//Phân tích cấu trúc dự án
+//Code dự án kết thúc Module

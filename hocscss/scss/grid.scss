@@ -1,0 +1,58 @@
+$containerWidth: 1240px;
+$containerPadding: 15px;
+$columnSpace: 20px;
+$maxColumn: 12;
+$breakpoint: (
+  sm: 576,
+  md: 768,
+  lg: 992,
+  xl: 1200,
+);
+@mixin column($name: "") {
+  @for $i from 1 through $maxColumn {
+    $width: calc(100% / 12 * $i);
+    $selectorCol: ".col-";
+    $selectorOffset: ".offset-";
+    @if ($name != "") {
+      $selectorCol: $selectorCol + $name + "-";
+      $selectorOffset: $selectorOffset + $name + "-";
+    }
+    #{$selectorCol + $i} {
+      flex-basis: $width;
+      max-width: $width;
+    }
+    #{$selectorOffset + $i} {
+      margin-left: $width;
+    }
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: $containerWidth;
+  margin: auto;
+  padding: 0 $containerPadding;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 - $columnSpace / 2;
+}
+[class^="col-"] {
+  padding: 0 $columnSpace / 2 $columnSpace;
+}
+@include column();
+@each $name, $size in $breakpoint {
+  @media screen and (min-width: #{$size}px) {
+    @include column($name);
+  }
+}
+
+@media screen and (min-width: #{$containerWidth + 100}) {
+  .container {
+    padding: 0;
+  }
+}
