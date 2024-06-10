@@ -1,0 +1,5 @@
+@use "variables";
+@forward "variables" as variable-*; //Chuyển tiếp file variables để các file import file _main.scss được sử dụng các dữ liệu trong variables
+.main {
+  color: variables.$primary-color;
+}

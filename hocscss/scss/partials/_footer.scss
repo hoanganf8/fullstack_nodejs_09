@@ -1,0 +1,14 @@
+$bgColor: red;
+$-fontSize: 16px; //private member: Bắt đầu bằng - hoặc _
+@mixin -container {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+.footer {
+  padding: 30px 0;
+  background: $bgColor;
+  font-size: $-fontSize;
+  @include -container;
+}

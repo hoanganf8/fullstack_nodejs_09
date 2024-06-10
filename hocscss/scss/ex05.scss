@@ -1,0 +1,5 @@
+@use "partials/main";
+
+body {
+  color: main.$variable-secondaryColor;
+}
