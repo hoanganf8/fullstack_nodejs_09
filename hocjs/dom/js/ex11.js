@@ -36,3 +36,39 @@ function handleDrag(e) {
   }
   progress.style.width = `${rate}%`;
 }
+
+//Xây dựng player
+var audio = document.querySelector("audio");
+var playAction = document.querySelector(".player .play-action i");
+var currentTimeEl = progressBar.previousElementSibling;
+var durationEl = progressBar.nextElementSibling;
+var getTimeFormat = function (seconds) {
+  var mins = Math.floor(seconds / 60);
+  seconds = Math.floor(seconds - mins * 60);
+  return `${mins < 10 ? "0" + mins : mins}:${
+    seconds < 10 ? "0" + seconds : seconds
+  }`;
+};
+audio.addEventListener("canplay", function () {
+  durationEl.innerText = getTimeFormat(audio.duration);
+});
+playAction.addEventListener("click", function () {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+  }
+});
+audio.addEventListener("play", function () {
+  playAction.classList.replace("fa-play", "fa-pause");
+});
+audio.addEventListener("pause", function () {
+  playAction.classList.replace("fa-pause", "fa-play");
+});
+audio.addEventListener("timeupdate", function () {
+  currentTimeEl.innerText = getTimeFormat(audio.currentTime);
+  var rate = (audio.currentTime / audio.duration) * 100;
+  progress.style.width = `${rate}%`;
+});
+
+//DOM Nodes

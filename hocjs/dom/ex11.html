@@ -4,14 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/ex11.css" />
   </head>
   <body>
-    <div class="progress-bar">
-      <div class="progress">
-        <span></span>
+    <div class="player">
+      <div class="play-action">
+        <i class="fa-solid fa-play"></i>
+      </div>
+      <div class="play-timer">
+        <span>00:00</span>
+        <div class="progress-bar">
+          <div class="progress">
+            <span></span>
+          </div>
+        </div>
+        <span>00:00</span>
       </div>
     </div>
+    <audio src="./mp3/cu-ngo-la-anh.mp3" controls></audio>
     <script src="js/ex11.js"></script>
   </body>
 </html>
