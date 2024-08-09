@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        padding-top: 41px;
+      }
+      section {
+        height: 100vh;
+        padding: 15px;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: yellow;
+        z-index: 100;
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+      }
+      nav {
+        button {
+          &.active {
+            color: red;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <button data-target="#section-1" class="active">Section 1</button>
+      <button data-target="#section-2">Section 2</button>
+      <button data-target="#section-3">Section 3</button>
+    </nav>
+    <section id="section-1">
+      <h2>Section 1</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem
+        esse cum vel est sit rerum iure, magnam adipisci aperiam ipsum ea
+        similique! Corporis quibusdam veniam deserunt nam culpa, ex expedita!
+      </p>
+    </section>
+    <section id="section-2">
+      <h2>Section 2</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem
+        esse cum vel est sit rerum iure, magnam adipisci aperiam ipsum ea
+        similique! Corporis quibusdam veniam deserunt nam culpa, ex expedita!
+      </p>
+    </section>
+    <section id="section-3">
+      <h2>Section 3</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem
+        esse cum vel est sit rerum iure, magnam adipisci aperiam ipsum ea
+        similique! Corporis quibusdam veniam deserunt nam culpa, ex expedita!
+      </p>
+    </section>
+    <script src="js/ex16.js"></script>
+  </body>
+</html>
